@@ -1,5 +1,1 @@
-[
-  { "file": "1-checklist.jpg", "path": "/", "viewport": { "width": 1280, "height": 800 } },
-  { "file": "2-silver.jpg", "path": "/", "grade": "silver", "viewport": { "width": 1280, "height": 800 } },
-  { "file": "3-bronze.jpg", "path": "/", "grade": "bronze", "scroll": 1400, "viewport": { "width": 1280, "height": 800 } }
-]
+[{"file":"1-cover.jpg","path":"/","view":"Checklist top with sunset header, progress panel (6 of 55 earned, 11%) and per-grade counts","viewport":{"height":800,"width":1280}},{"file":"2-guide.jpg","path":"/","view":"Checklist with the Just Like Paradise row expanded, showing its full guide text, kind and stage tags, and named sources","viewport":{"height":800,"width":1280}},{"file":"3-roadmap.jpg","path":"/","view":"Roadmap to the Platinum timeline with the missable notes and the ordered stages with their trophy chips","viewport":{"height":800,"width":1280}},{"file":"4-missables.jpg","path":"/","view":"Checklist with the Missable filter active and the first missable trophy expanded","viewport":{"height":800,"width":1280}}]

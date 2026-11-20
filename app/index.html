@@ -1,25 +1,65 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>GTA VI trophy checklist</title>
-<link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Leonida Nights — GTA 6 Trophy Checklist &amp; Guide</title>
+<link rel="stylesheet" href="./style.css">
 </head>
 <body>
-<header>
-  <h1>GTA VI trophy checklist</h1>
-  <p id="progress">0 of 55 earned</p>
+<header class="hero">
+  <div class="hero-inner">
+    <p class="kicker">LEONIDA NIGHTS · VOCAINE EDITION</p>
+    <h1>GTA 6 Trophy Checklist &amp; Guide</h1>
+    <p class="sub">All 55 PlayStation 5 trophies — an original guide, a roadmap to the platinum, and a tracker that saves on this device. Fully offline.</p>
+    <div class="progress-panel">
+      <div class="progress-big"><span id="earnedCount">0</span> / 55 earned · <span id="earnedPct">0%</span></div>
+      <div class="progress-bar"><div id="progressFill"></div></div>
+      <div class="grade-counts" id="gradeCounts"></div>
+    </div>
+    <div class="hero-actions">
+      <button id="exportBtn" type="button">Export progress</button>
+      <label class="import-label" for="importFile">Import progress</label>
+      <input id="importFile" type="file" accept="application/json" hidden>
+      <label class="spoiler-toggle"><input id="spoilerToggle" type="checkbox"> Spoiler shield: hide story trophies until earned</label>
+    </div>
+  </div>
 </header>
-<div class="controls">
-  <label>Grade <select id="grade"><option value="all">All</option><option value="platinum">Platinum</option><option value="gold">Gold</option><option value="silver">Silver</option><option value="bronze">Bronze</option></select></label>
-  <button id="export" type="button">Export progress</button>
-  <label class="import">Import progress <input id="import" type="file" accept="application/json"></label>
-</div>
-<table>
-  <thead><tr><th>Earned</th><th>Trophy</th><th>Grade</th><th>How to get it</th></tr></thead>
-  <tbody id="rows"></tbody>
-</table>
-<script type="module" src="app.js"></script>
+<main>
+  <section id="roadmapSection">
+    <h2>Roadmap to the Platinum</h2>
+    <p id="missableNotes" class="missable-notes"></p>
+    <div id="roadmap" class="timeline"></div>
+  </section>
+  <section>
+    <h2>The Checklist</h2>
+    <div class="controls">
+      <div class="filter-row" id="kindFilters">
+        <button data-kind="all" class="active" type="button">All</button>
+        <button data-kind="story" type="button">Story</button>
+        <button data-kind="missable" type="button">Missable</button>
+        <button data-kind="collectibles" type="button">Collectibles</button>
+        <button data-kind="activities" type="button">Activities</button>
+        <button data-kind="online" type="button">Online</button>
+      </div>
+      <div class="filter-row">
+        <select id="gradeFilter" aria-label="Filter by grade">
+          <option value="all">All grades</option>
+          <option value="platinum">Platinum</option>
+          <option value="gold">Gold</option>
+          <option value="silver">Silver</option>
+          <option value="bronze">Bronze</option>
+        </select>
+        <input id="searchBox" type="search" placeholder="Search trophies…" aria-label="Search trophies">
+      </div>
+    </div>
+    <div id="list"></div>
+    <p id="emptyMsg" class="empty" hidden>No trophies match those filters.</p>
+  </section>
+  <footer>
+    <p>Guide text written for Leonida Nights from the official trophy list. Sources consulted by name: PlayStation official trophy list · PSNProfiles — GTA 6 trophies · Exophase — GTA 6 trophy list · PowerPyx — GTA 6 Trophy Guide · IGN — GTA 6 wiki.</p>
+  </footer>
+</main>
+<script type="module" src="./app.js"></script>
 </body>
 </html>
